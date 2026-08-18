@@ -16,5 +16,7 @@ The generated site is written to `quartz-site/public`.
 
 Pushes to `main` invoke GameCult Quartz's reusable GitHub Pages workflow. GitHub Pages owns the custom domain setting for `ghostlight.gamecult.org`; a repository `CNAME` file is not authoritative for this Actions-based deployment.
 
-Prices, cell limits, and provider policies on the page are provisional until the paid alpha opens.
-
+Prices, cell limits, lore Vault allowances, import budgets, and provider policies
+on the page are provisional until the paid alpha opens. Compatible lore Vaults
+are Git-synchronized, Obsidian-compatible Markdown folder hierarchies; custom
+tenant ingestion remains gated in the current tester harness.

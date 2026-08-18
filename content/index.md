@@ -7,6 +7,7 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <a class="gd-wordmark" href="/" aria-label="Ghostlight Dungeon home"><span class="gd-mark" aria-hidden="true">✦</span> Ghostlight Dungeon</a>
 <div class="gd-nav-links">
 <a href="#world">The world</a>
+<a href="#vaults">Lore Vaults</a>
 <a href="#plans">Plans</a>
 <a class="gd-nav-cta" href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20early%20access">Join early access</a>
 </div>
@@ -21,7 +22,7 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <a class="gd-button gd-button-primary" href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20early%20access&body=Tell%20us%20what%20kind%20of%20world%20you%20want%20to%20play%20in%3A%20">Request early access <span aria-hidden="true">→</span></a>
 <a class="gd-button gd-button-quiet" href="#world">See how the world moves</a>
 </div>
-<p class="gd-fine">Single-player campaigns · Fiction-first d20 resolution · Exportable state</p>
+<p class="gd-fine">Single-player campaigns · Git-synced Obsidian lore Vaults · Fiction-first d20 resolution · Exportable state</p>
 </div>
 <div class="gd-agency" role="img" aria-label="A living network of people, factions and places shown at different simulation resolutions">
 <div class="gd-agency-label"><span>AGENCY MAP</span><span class="gd-live">LIVE WORLD</span></div>
@@ -47,14 +48,14 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 </section>
 <section class="gd-proof" aria-label="Core product promises">
 <div><strong>Persistent</strong><span>People, places and consequences survive the context window.</span></div>
-<div><strong>Grounded</strong><span>Worldbuilding comes from evidence, not whatever the model vaguely remembers.</span></div>
+<div><strong>Grounded</strong><span>Worldbuilding comes from your source Vault, not whatever the model vaguely remembers.</span></div>
 <div><strong>Agentic</strong><span>Institutions and populations act for themselves—even while you are away.</span></div>
 </section>
 <section class="gd-breaks" aria-labelledby="breaks-title">
 <div class="gd-section-intro">
 <p class="gd-kicker">Common failure modes</p>
 <h2 id="breaks-title">How LLM roleplay goes wrong.</h2>
-<p>Good prose can hide a broken game. These are six common failure modes, a concrete example of each, and how Ghostlight is being built to address them.</p>
+<p>Good prose can hide a broken game. These are seven common failure modes, a concrete example of each, and how Ghostlight is being built to address them.</p>
 </div>
 <ol class="gd-failure-list">
 <li>
@@ -87,6 +88,11 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <div class="gd-failure-detail gd-failure-example"><span>Example</span><p>The broken treaty, wounded captain, and promised favour disappear once the relevant messages fall out of the chat history.</p></div>
 <div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Events and relationship changes are committed to durable state so later scenes can retrieve what still matters.</p></div>
 </li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 07</span><h3>“Custom world” means another prompt box.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>You provide a setting guide, but play still runs from a summary and a handful of memory cards. Distant places drift, setting rules soften, and most of the authored world is never consulted.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Bind the campaign to an actual Markdown lore Vault. Ghostlight retrieves exact source evidence as locations, mechanics, characters, and history become relevant.</p></div>
+</li>
 </ol>
 </section>
 <section class="gd-world" id="world" aria-labelledby="world-title">
@@ -100,6 +106,19 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <article><span class="gd-number">02</span><h3>Your action is an attempt</h3><p>Impossible claims are refused. Risky actions expose their odds and stakes before a server-side roll. Power has limits, so victory can matter.</p></article>
 <article><span class="gd-number">03</span><h3>The setting has agency</h3><p>Factions recruit, obstruct, bargain, migrate and prepare according to their own pressures. The world does not collapse into applause when the protagonist arrives.</p></article>
 <article><span class="gd-number">04</span><h3>Background lives can return</h3><p>Ghostlight simulates crowds and institutions as multiresolution Gestalts, then materialises individuals without erasing who they were. Help a refugee today; meet the same person years later.</p></article>
+</div>
+</section>
+<section class="gd-world" id="vaults" aria-labelledby="vaults-title">
+<div class="gd-section-intro">
+<p class="gd-kicker">Bring the actual setting</p>
+<h2 id="vaults-title">Your lore is a Vault.<br/>Not prompt stuffing.</h2>
+<p>A compatible lore Vault is simply an Obsidian-compatible folder hierarchy of Markdown files. Keep writing in Obsidian, sync the folder through Git, and adventure in the world you actually authored—not a short description that gradually dissolves into generic fantasy.</p>
+</div>
+<div class="gd-feature-grid">
+<article><span class="gd-number">01</span><h3>Plain Markdown</h3><p>No proprietary lore database. Existing Obsidian Vaults and Markdown knowledge bases retain their hierarchy, links, and Git history.</p></article>
+<article><span class="gd-number">02</span><h3>Evidence at the point of play</h3><p>The compiler and simulation retrieve exact source witnesses instead of asking one enormous prompt to remember an entire setting.</p></article>
+<article><span class="gd-number">03</span><h3>Canon stays yours</h3><p>Campaign inventions remain branch-local. Ghostlight records what evidence it used and does not silently rewrite the source Vault.</p></article>
+<article><span class="gd-number">04</span><h3>Built for real world bibles</h3><p>GameCult's Aetheria and Zyphos lore sites are already Obsidian-compatible. The same simple shape can carry your setting.</p></article>
 </div>
 </section>
 <section class="gd-callback" aria-label="Example persistent consequence">
@@ -125,29 +144,29 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <article class="gd-plan gd-plan-anchor">
 <p class="gd-plan-type">Contributor</p><h3><span>$</span>5<small>/month</small></h3>
 <p>Full persistent-world play at the standard simulation resolution.</p>
-<ul><li>8 active Persona cells</li><li>Persistent campaigns and away-time</li><li>Campaign export</li><li>Training contribution permitted</li></ul>
+<ul><li>8 active Persona cells</li><li>1 active lore Vault</li><li>Up to 10 million indexed source tokens</li><li>2 full Vault imports per month</li><li>Persistent campaigns and away-time</li><li>Campaign export</li><li>Training contribution permitted</li></ul>
 <a href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20Contributor%20interest">Join the early-access list</a>
 </article>
 <article class="gd-plan">
 <p class="gd-plan-type">Contributor Plus</p><h3><span>$</span>10<small>/month</small></h3>
 <p>More simultaneous agency for denser scenes and wider conflicts.</p>
-<ul><li>16 active Persona cells</li><li>Everything in Contributor</li><li>Less Gestalt consolidation</li><li>Training contribution permitted</li></ul>
+<ul><li>16 active Persona cells</li><li>3 active lore Vaults</li><li>Up to 30 million indexed source tokens combined</li><li>6 full Vault imports per month</li><li>Less Gestalt consolidation</li><li>Training contribution permitted</li></ul>
 <a href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20Contributor%20Plus%20interest">Join the early-access list</a>
 </article>
 <article class="gd-plan gd-plan-private">
 <div class="gd-plan-badge">PRIVATE LANE</div><p class="gd-plan-type">Private</p><h3><span>$</span>15<small>/month</small></h3>
 <p>The standard simulation with a provider policy that forbids Contributor routing.</p>
-<ul><li>8 active Persona cells</li><li>Everything in Contributor</li><li>No training-contributor provider</li><li>Auditable provider receipts</li></ul>
+<ul><li>8 active Persona cells</li><li>1 active lore Vault</li><li>Up to 10 million indexed source tokens</li><li>2 full Vault imports per month</li><li>No training-contributor provider</li><li>Auditable provider receipts</li></ul>
 <a href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20Private%20interest">Join the early-access list</a>
 </article>
 <article class="gd-plan gd-plan-private">
 <div class="gd-plan-badge">PRIVATE LANE</div><p class="gd-plan-type">Private Plus</p><h3><span>$</span>30<small>/month</small></h3>
 <p>Higher world resolution without contributing campaign material for training.</p>
-<ul><li>16 active Persona cells</li><li>Everything in Private</li><li>Less Gestalt consolidation</li><li>Auditable provider receipts</li></ul>
+<ul><li>16 active Persona cells</li><li>3 active lore Vaults</li><li>Up to 30 million indexed source tokens combined</li><li>6 full Vault imports per month</li><li>No training-contributor provider</li><li>Auditable provider receipts</li></ul>
 <a href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20Private%20Plus%20interest">Join the early-access list</a>
 </article>
 </div>
-<p class="gd-pricing-note">Prices and limits are provisional while we measure the paid alpha. Contributor consent will be explicit and campaign-bound; a private campaign will never silently fall back to a contributor provider.</p>
+<p class="gd-pricing-note">Prices and limits are provisional while we measure the paid alpha. Vault imports are content-addressed and incremental updates will not count as full imports when unchanged documents can retain their index. Contributor consent will be explicit and campaign-bound; a private campaign will never silently fall back to a contributor provider.</p>
 </section>
 <section class="gd-final">
 <p class="gd-kicker">Built by GameCult</p>
