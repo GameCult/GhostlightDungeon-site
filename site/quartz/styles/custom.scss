@@ -69,16 +69,20 @@ body {
 .gd-proof span { color: #8f95a9; font-size: .82rem; line-height: 1.55; }
 
 .gd-world, .gd-plans, .gd-breaks { max-width: 1180px; margin: 0 auto; padding: 5rem 1.5rem 7rem; }
-.gd-breaks { display: grid; grid-template-columns: .66fr 1.34fr; gap: 5rem; }
-.gd-failure-list { margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.13); list-style: none; }
-.gd-failure-list > li { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem 2rem; padding: 2rem 0 2.2rem; border-bottom: 1px solid rgba(255,255,255,.1); }
-.gd-failure-heading { grid-column: 1 / -1; display: grid; grid-template-columns: 8rem 1fr; gap: 1.25rem; align-items: baseline; }
+.gd-breaks { display: block; }
+.gd-breaks .gd-section-intro { position: static; max-width: 800px; }
+.gd-failure-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; margin: 3.5rem 0 0; padding: 0; list-style: none; }
+.gd-failure-list > li { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.11); border-radius: 10px; background: linear-gradient(145deg, rgba(24,28,41,.94), rgba(12,15,24,.96)); box-shadow: inset 0 1px rgba(255,255,255,.035), 0 24px 60px rgba(0,0,0,.18); }
+.gd-failure-list > li::before { content: ""; position: absolute; z-index: 1; inset: 0 0 auto; height: 2px; background: linear-gradient(90deg, var(--violet), rgba(227,155,255,.25) 52%, transparent); }
+.gd-failure-heading { display: block; min-height: 9.8rem; margin: 0; padding: 1.7rem 1.7rem 1.45rem; border-bottom: 1px solid rgba(255,255,255,.08); }
 .gd-failure-heading > span, .gd-failure-detail > span { font: 600 .6rem/1.4 "IBM Plex Mono", monospace; letter-spacing: .11em; text-transform: uppercase; }
-.gd-failure-heading > span { color: var(--violet); }
-.gd-failure-heading h3 { margin: 0; font: 600 1.28rem/1.25 "Space Grotesk", sans-serif; }
+.gd-failure-heading > span { display: inline-flex; padding: .34rem .55rem; color: var(--violet); border: 1px solid rgba(227,155,255,.26); border-radius: 999px; background: rgba(227,155,255,.06); }
+.gd-failure-heading h3 { margin: .9rem 0 0; font: 600 1.3rem/1.25 "Space Grotesk", sans-serif; }
+.gd-failure-detail { padding: 1.3rem 1.7rem 1.5rem; }
 .gd-failure-detail > span { display: block; margin-bottom: .45rem; color: #777f96; }
 .gd-failure-detail > p { margin: 0; color: #9da4b7; font-size: .86rem; line-height: 1.62; }
-.gd-failure-response { padding-left: 1.25rem; border-left: 2px solid rgba(115,239,209,.6); }
+.gd-failure-example { flex: 1; }
+.gd-failure-response { border-top: 1px solid rgba(115,239,209,.18); background: linear-gradient(120deg, rgba(115,239,209,.075), rgba(115,239,209,.018)); }
 .gd-failure-response > span { color: var(--mint); }
 .gd-failure-response > p { color: #cbd1df; }
 .gd-world { display: grid; grid-template-columns: .8fr 1.2fr; gap: 6rem; }
@@ -130,7 +134,7 @@ body {
   .gd-hero { grid-template-columns: 1fr; padding-top: 4.5rem; }
   .gd-agency { max-width: 680px; width: 100%; }
   .gd-world { grid-template-columns: 1fr; gap: 3rem; }
-  .gd-breaks { grid-template-columns: 1fr; gap: 3rem; }
+  .gd-failure-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gd-section-intro { position: static; }
   .gd-pricing { grid-template-columns: 1fr 1fr; }
   .gd-plan:nth-child(3) { border-left-width: 1px; }
@@ -147,9 +151,8 @@ body {
   .gd-proof { grid-template-columns: 1fr; margin: 0 1.15rem 5rem; }
   .gd-proof div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   .gd-feature-grid { grid-template-columns: 1fr; }
-  .gd-failure-list > li { grid-template-columns: 1fr; gap: 1rem; }
-  .gd-failure-heading { grid-template-columns: 1fr; gap: .45rem; }
-  .gd-failure-response { padding-left: 1rem; }
+  .gd-failure-list { grid-template-columns: 1fr; }
+  .gd-failure-heading { min-height: 0; }
   .gd-feature-grid article { min-height: 240px; border-left-width: 1px; border-bottom-width: 0; }
   .gd-feature-grid article:last-child { border-bottom-width: 1px; }
   .gd-callback { margin-inline: 1.15rem; padding: 2.2rem 1.5rem; grid-template-columns: 1fr; gap: 1rem; }
