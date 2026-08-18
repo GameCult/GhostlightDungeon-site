@@ -52,18 +52,42 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 </section>
 <section class="gd-breaks" aria-labelledby="breaks-title">
 <div class="gd-section-intro">
-<p class="gd-kicker">You have felt the seams</p>
-<h2 id="breaks-title">The dream ends when the world has an owner.</h2>
-<p>A language model can write a convincing room. That does not mean it knows where the room is, who remains inside it, or what the empire outside intends to do next. Ghostlight gives those decisions somewhere durable to live.</p>
+<p class="gd-kicker">Common failure modes</p>
+<h2 id="breaks-title">How LLM roleplay goes wrong.</h2>
+<p>Good prose can hide a broken game. These are six common failure modes, a concrete example of each, and how Ghostlight is being built to address them.</p>
 </div>
-<div class="gd-compare" role="list">
-<article role="listitem"><p>THE DREAM</p><h3>Canon becomes vibes.</h3><span>Mechanics mutate and distant places become neighbours because nothing beneath the prose owns the setting.</span><strong>Vault-grounded evidence and persistent topology keep the world attached to itself.</strong></article>
-<article role="listitem"><p>THE DREAM</p><h3>People vanish when you look away.</h3><span>The current speaker consumes the scene. Everyone else waits outside the context window until prompted to react.</span><strong>Every affected participant perceives committed events and may respond from their own state.</strong></article>
-<article role="listitem"><p>THE DREAM</p><h3>Knowledge teleports.</h3><span>Characters suddenly become experts or reveal secrets because the model saw information the character never earned.</span><strong>Knowledge, perception and authority are validated against the exact character proposing an action.</strong></article>
-<article role="listitem"><p>THE DREAM</p><h3>The narrator always says yes.</h3><span>A player can declare the impossible, dissolve every obstacle, and discover that a story without refusal has no stakes.</span><strong>You declare an attempt. The world decides whether it is possible, costly, uncertain—or refused.</strong></article>
-<article role="listitem"><p>THE DREAM</p><h3>History waits at the door.</h3><span>Wars, investigations and journeys freeze until the protagonist returns to make them narratively convenient.</span><strong>Clocks advance, populations move and institutions act during absence without puppeting the player.</strong></article>
-<article role="listitem"><p>THE DREAM</p><h3>Power exists to admire you.</h3><span>An extraordinary newcomer makes ancient institutions collapse into awe instead of recruiting, exploiting, resisting or containing them.</span><strong>Established powers pursue their interests. Being powerful makes you valuable—and dangerous.</strong></article>
-</div>
+<ol class="gd-failure-list">
+<li>
+<header class="gd-failure-heading"><span>Failure mode 01</span><h3>The world contradicts itself.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>The road that took a week becomes an afternoon. The inn moves across town. A spell quietly gains a new rule.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Locations, rules, and committed events live in durable state, with relevant source evidence retrieved for narration.</p></div>
+</li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 02</span><h3>Characters know things they were never told.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>A guard recognises the alias you revealed privately to a thief three cities away.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Each character acts from a local view built from what they perceived, learned, and remember—not from every fact the model can see.</p></div>
+</li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 03</span><h3>NPCs cease to exist offscreen.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>You leave a refugee convoy for a month. When you return, everyone is still waiting in the same camp for your next line.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>People persist beyond the active scene, and background change can be resolved at the level the campaign needs so individuals can leave, adapt, and return.</p></div>
+</li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 04</span><h3>Player declarations become facts.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>“I kick down the fortress gate” works because the player said it confidently—not because the character could do it.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>An attempted action is separate from its result. Possibility, cost, risk, and resolution are checked before the world changes.</p></div>
+</li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 05</span><h3>The world rearranges itself around the protagonist.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>A centuries-old order abandons its interests to admire, recruit, or obey the powerful newcomer.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Characters and institutions have their own pressures, authority, and relationships, so they can refuse, bargain, exploit, contain, or resist.</p></div>
+</li>
+<li>
+<header class="gd-failure-heading"><span>Failure mode 06</span><h3>Consequences vanish from context.</h3></header>
+<div class="gd-failure-detail gd-failure-example"><span>Example</span><p>The broken treaty, wounded captain, and promised favour disappear once the relevant messages fall out of the chat history.</p></div>
+<div class="gd-failure-detail gd-failure-response"><span>How Ghostlight addresses it</span><p>Events and relationship changes are committed to durable state so later scenes can retrieve what still matters.</p></div>
+</li>
+</ol>
 </section>
 <section class="gd-world" id="world" aria-labelledby="world-title">
 <div class="gd-section-intro">
