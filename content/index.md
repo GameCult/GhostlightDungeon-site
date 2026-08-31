@@ -8,6 +8,7 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <div class="gd-nav-links">
 <a href="#world">The world</a>
 <a href="#vaults">Lore Vaults</a>
+<a href="/Documentation/">Architecture</a>
 <a href="#plans">Plans</a>
 <a class="gd-nav-cta" href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20early%20access">Join early access</a>
 </div>

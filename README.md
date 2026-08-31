@@ -12,6 +12,21 @@ Clone `GameCult-Quartz` beside this repository, install its dependencies, then r
 
 The generated site is written to `quartz-site/public`.
 
+## Architecture documentation
+
+The Ghostlight repository owns technical truth under
+`docs/public-architecture`. This site commits an exact publication projection
+under `content/Documentation` so GitHub Pages can build independently.
+
+Refresh and verify it with:
+
+```powershell
+.\scripts\sync-architecture-docs.ps1
+.\scripts\sync-architecture-docs.ps1 -Check
+```
+
+Do not hand-edit the projected pages. Change the Ghostlight source, then sync.
+
 ## Deployment
 
 Pushes to `main` invoke GameCult Quartz's reusable GitHub Pages workflow. GitHub Pages owns the custom domain setting for `ghostlight.gamecult.org`; a repository `CNAME` file is not authoritative for this Actions-based deployment.
