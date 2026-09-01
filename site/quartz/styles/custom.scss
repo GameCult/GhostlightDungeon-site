@@ -1,19 +1,102 @@
 @use "sass:color";
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+  --ghostlight-mint: #73efd1;
+  --ghostlight-violet: #e39bff;
+  --ghostlight-paper: #f8f5ff;
+}
 
 html { scroll-behavior: smooth; }
 
 body {
+  overflow-x: clip;
   background:
     radial-gradient(circle at 72% 7%, rgba(102, 67, 151, 0.2), transparent 28rem),
     radial-gradient(circle at 8% 31%, rgba(38, 132, 118, 0.1), transparent 24rem),
     #090b12;
 }
 
+.page > #quartz-body .page-header {
+  display: contents;
+}
+
+.page > #quartz-body .page-header > header {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0 0 2.5rem calc(50% - 50vw);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 11, 18, 0.94);
+  backdrop-filter: blur(16px);
+}
+
+body[data-slug="index"] .page > #quartz-body .page-header > header {
+  margin-bottom: 0;
+}
+
+.ghostlight-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1220px;
+  min-height: 76px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.ghostlight-wordmark {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ghostlight-paper);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.ghostlight-mark {
+  color: var(--ghostlight-mint);
+  filter: drop-shadow(0 0 8px rgba(115, 239, 209, 0.7));
+}
+
+.ghostlight-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem 1.35rem;
+  min-width: 0;
+}
+
+.ghostlight-nav a {
+  color: #c4c8d8;
+  font: 500 0.82rem/1 "Space Grotesk", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ghostlight-nav a:hover,
+.ghostlight-nav a.active {
+  color: var(--ghostlight-mint);
+}
+
+.ghostlight-nav .ghostlight-nav-cta {
+  padding: 0.68rem 0.9rem;
+  border: 1px solid rgba(115, 239, 209, 0.55);
+  border-radius: 999px;
+}
+
 .page:has(.gd-shell) > #quartz-body { display: block; }
 .page:has(.gd-shell) > #quartz-body .center { margin: 0; max-width: none; padding: 0; }
-.page:has(.gd-shell) > #quartz-body .page-header { margin: 0; }
 .page:has(.gd-shell) article { max-width: none; }
 .page:has(.gd-shell) article > h1:first-child { display: none; }
 .page footer { max-width: 1180px; margin: 0 auto; padding: 2rem 1.5rem 3rem; border-top: 1px solid rgba(255,255,255,.08); }
@@ -50,14 +133,6 @@ body {
 .gd-shell { --mint: #73efd1; --violet: #e39bff; --paper: #f8f5ff; --muted: #9aa0b5; color: var(--paper); overflow: hidden; }
 .gd-shell * { box-sizing: border-box; }
 .gd-shell a { color: inherit; }
-
-.gd-nav { min-height: 78px; max-width: 1220px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.08); }
-.gd-wordmark { display: flex; gap: .7rem; align-items: center; font-family: "Space Grotesk", sans-serif; font-weight: 650; letter-spacing: -.02em; text-decoration: none; }
-.gd-mark { color: var(--mint); filter: drop-shadow(0 0 8px rgba(115,239,209,.7)); }
-.gd-nav-links { display: flex; align-items: center; gap: 1.5rem; font-size: .82rem; }
-.gd-nav-links a { text-decoration: none; color: #c4c8d8; }
-.gd-nav-links a:hover { color: white; }
-.gd-nav-cta { border: 1px solid rgba(115,239,209,.55); border-radius: 999px; padding: .7rem 1rem; }
 
 .gd-hero { max-width: 1220px; margin: 0 auto; min-height: 720px; padding: 6.5rem 1.5rem 5rem; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(420px, .98fr); gap: 3rem; align-items: center; }
 .gd-eyebrow, .gd-kicker { color: var(--mint); font: 600 .73rem/1.2 "IBM Plex Mono", monospace; letter-spacing: .13em; text-transform: uppercase; }
@@ -170,9 +245,25 @@ body {
 }
 
 @media (max-width: 680px) {
-  .gd-nav-links > a:not(.gd-nav-cta) { display: none; }
-  .gd-nav { min-height: 68px; }
-  .gd-wordmark { font-size: .9rem; }
+  .page > #quartz-body .page-header > header {
+    margin-bottom: 1.75rem;
+  }
+  body[data-slug="index"] .page > #quartz-body .page-header > header {
+    margin-bottom: 0;
+  }
+  .ghostlight-masthead {
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: 0;
+    padding-block: 0.9rem;
+  }
+  .ghostlight-wordmark { font-size: 0.95rem; }
+  .ghostlight-nav {
+    justify-content: center;
+    gap: 0.55rem 1rem;
+  }
+  .ghostlight-nav a { font-size: 0.78rem; }
+  .ghostlight-nav .ghostlight-nav-cta { padding: 0.55rem 0.75rem; }
   .gd-hero { min-height: auto; padding: 3.8rem 1.15rem 3rem; }
   .gd-hero h1 { font-size: clamp(3.2rem, 16vw, 5rem); }
   .gd-agency { min-height: 430px; }
@@ -191,6 +282,76 @@ body {
   .gd-plan:nth-child(3) { border-left-width: 1px; }
   .gd-plan ul, .gd-plan > p:not(.gd-plan-type) { min-height: 0; }
   .gd-final { padding-inline: 1.2rem; }
+}
+
+.architecture-status {
+  margin: 0 0 2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(227, 155, 255, 0.3);
+  border-left: 3px solid var(--ghostlight-violet);
+  background: rgba(227, 155, 255, 0.07);
+  color: #c7cada;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.architecture-status strong {
+  color: var(--ghostlight-paper);
+}
+
+.architecture-status a {
+  color: var(--ghostlight-mint);
+}
+
+.ghostlight-blog-intro {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.ghostlight-blog-intro > p:last-child {
+  color: #b3b8ca;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.ghostlight-blog-kicker,
+.ghostlight-blog-date {
+  color: var(--ghostlight-mint);
+  font: 600 0.68rem/1.4 "IBM Plex Mono", monospace;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.ghostlight-blog-card {
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-top: 2px solid var(--ghostlight-violet);
+  background: linear-gradient(145deg, rgba(24, 28, 41, 0.94), rgba(12, 15, 24, 0.96));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.ghostlight-blog-card h2 {
+  margin: 0.8rem 0 1rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: -0.04em;
+}
+
+.ghostlight-blog-card h2 a,
+.ghostlight-blog-read {
+  text-decoration: none;
+}
+
+.ghostlight-blog-card > p:not(.ghostlight-blog-date) {
+  color: #aab0c2;
+  line-height: 1.7;
+}
+
+.ghostlight-blog-read {
+  display: inline-flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+  color: var(--ghostlight-mint);
+  font: 600 0.82rem "Space Grotesk", sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -73,6 +73,28 @@ exact assignment and frozen namespace. Wave admission resolves conflicts; an
 independent semantic verifier reviews the inhabited candidate; `WorldKernel`
 alone commits it.
 
+At latent-world scale, the same titled sessions also receive
+`world-complexity-<title>-fission` or
+`world-complexity-<title>-individuate` assignments. Each call may subdivide one
+active Gestalt or promote one grounded consequential person. A fission worker
+returns only the partition delta—child identities and partition values plus
+exact member/resource assignments. The deterministic tool attaches the frozen
+world binding and inherited population state, avoiding repeated constitutions
+in model output. An individuation worker similarly supplies the member delta
+while the tool owns parent version and location. Deterministic validation and
+the existing kernel commands remain the only admission owners. A rejected
+fission returns the complete deterministic mismatch set to the same agentic
+turn, rather than hiding several repairable defects behind one generic error.
+Its action schema exposes the exact frozen resource and dormant-member IDs as
+required assignment keys, while leaving their destination children to the
+writer.
+After every productive round,
+`world-elaborator-<title>-session-compaction` distills that title's frontier in
+the assigned realm jurisdiction and its unresolved leads while the harness
+reattaches exact commit ancestry. The title-by-realm key prevents unrelated
+political frontiers from becoming one global transcript. Compacted memory can
+guide later proposals but cannot create subjects or facts.
+
 ## Foreground perception, response, and action
 
 | Stage | Tier | Purpose | Output and downstream gate |

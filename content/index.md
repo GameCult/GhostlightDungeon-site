@@ -3,20 +3,10 @@ title: Ghostlight Dungeon
 description: A persistent, source-grounded AI roleplaying world that remembers where everything is—and keeps moving when you look away.
 ---
 <div class="gd-shell">
-<nav class="gd-nav" aria-label="Primary navigation">
-<a class="gd-wordmark" href="/" aria-label="Ghostlight Dungeon home"><span class="gd-mark" aria-hidden="true">✦</span> Ghostlight Dungeon</a>
-<div class="gd-nav-links">
-<a href="#world">The world</a>
-<a href="#vaults">Lore Vaults</a>
-<a href="/Documentation/">Architecture</a>
-<a href="#plans">Plans</a>
-<a class="gd-nav-cta" href="mailto:meta@gamecult.org?subject=Ghostlight%20Dungeon%20early%20access">Join early access</a>
-</div>
-</nav>
 <main>
 <section class="gd-hero" aria-labelledby="hero-title">
 <div class="gd-hero-copy">
-<p class="gd-eyebrow"><span></span> Private alpha in development</p>
+<p class="gd-eyebrow"><span></span> Private alpha architecture under rebuild</p>
 <h1 id="hero-title">A world that does not <em>wait for you.</em></h1>
 <p class="gd-lede">Ghostlight Dungeon is an AI game master built around a persistent world—not a chat log. Places stay where they are. Characters know what they have learned. Powers pursue their own interests. What happens offscreen can find you later.</p>
 <div class="gd-actions">
@@ -26,7 +16,7 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <p class="gd-fine">Single-player campaigns · Git-synced Obsidian lore Vaults · Fiction-first d20 resolution · Exportable state</p>
 </div>
 <div class="gd-agency" role="img" aria-label="A living network of people, factions and places shown at different simulation resolutions">
-<div class="gd-agency-label"><span>AGENCY MAP</span><span class="gd-live">LIVE WORLD</span></div>
+<div class="gd-agency-label"><span>AGENCY MAP</span><span class="gd-live">DESIGN TARGET</span></div>
 <svg viewBox="0 0 620 520" aria-hidden="true">
 <defs>
 <radialGradient id="aura"><stop offset="0" stop-color="#73efd1" stop-opacity=".22"/><stop offset="1" stop-color="#73efd1" stop-opacity="0"/></radialGradient>
@@ -44,7 +34,7 @@ description: A persistent, source-grounded AI roleplaying world that remembers w
 <g class="gd-cell gd-cell-faction"><circle cx="414" cy="415" r="48"/><path d="M393 421 H435 M400 409 H428 M407 397 H421"/><text x="414" y="481">DESTINATION CITY</text></g>
 <g class="gd-cell gd-cell-faction"><circle cx="158" cy="390" r="44"/><path d="M142 402 L158 372 L174 402 Z"/><text x="158" y="451">BORDER CLOCK</text></g>
 </svg>
-<div class="gd-agency-foot"><span>8 active persona cells</span><span>24 persistent subjects</span></div>
+<div class="gd-agency-foot"><span>illustrative attention cells</span><span>illustrative persistent subjects</span></div>
 </div>
 </section>
 <section class="gd-proof" aria-label="Core product promises">
